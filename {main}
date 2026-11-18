@@ -12,7 +12,7 @@ load_dotenv()
 GH_TOKEN = os.environ["GITHUB_TOKEN"]
 TG_TOKEN = os.environ["TELEGRAM_TOKEN"]
 TG_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
-POLL_SECONDS = int(os.getenv("POLL_SECONDS", "1"))
+POLL_SECONDS = int(os.getenv("POLL_SECONDS", "80"))
 
 GH_HEADERS = {
     "Authorization": f"Bearer {GH_TOKEN}",
@@ -117,7 +117,9 @@ def main() -> None:
     //Get events
     while True:
         try:
-            for repo in get_repos():
+            repos = get_repos() 
+            print("Watching:", repos) //A console message that says which repositories do you own and where is it looking for updates
+            for repo in repos():
                 events = get_events(repo)
                 if not events:
                     continue
