@@ -1,0 +1,14 @@
+            THIS IS A TELEGRAM BOT REPOSITORY
+In this Repository there is everything i used to make this work.
+I have done most of the work with the help of Claude AI.
+I also used Visual studio community (2026 version) to 
+write the code, execute it, and to troubleshoot errors that
+occured along with the development of given bot.
+What is this bot supposed to do?
+1. As soon as it loads, its supposed to notify you
+(" GitHub notifier started.")
+2. To constantly refresh any repository i have access to (includes private
+repositories of other people, but only if they have given me the access)
+3. in a short period of time (30 seconds to 5 minutes), 
+notify the groupchat about all new changes commited.
+                                                          
